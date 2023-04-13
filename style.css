@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    background-color: rgba(255, 255, 255, .1);
+    transition: 0.5s ease;
+    z-index: 999;
+}
+header.sticky {
+    background-color: crimson;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header .brand {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.header .navigation {
+    position: relative;
+}
+.header .navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: 0.5s ease;
+}
+.header .navigation a:hover {
+    color: #666;
+}
+section {
+    padding: 100px;
+}
+.main {
+    position: relative;
+    background: url('images/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.main .content {
+    max-width: 600px;
+}
+.main .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+.main .content h2 span {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.animated-text {
+    position: relative;
+    line-height: 70px;
+    height: 70px;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.animated-text h3 {
+    color: crimson;
+    font-size: 52px;
+    font-weight: 600;
+}
+.animated-text h3:nth-child(1) {
+    animation-name: text-move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+} 
+
+@keyframes text-move {
+    0% {
+        margin-top: 0;
+    }
+    25% {
+        margin-top: -70px;
+    }
+    50%{
+        margin-top: -140px;
+    }
+    75%{
+        margin-top: -70px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+}
+
+.btn {
+    color: #fff;
+    background-color: crimson;
+    font-size: 17px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    margin: 30px 0;
+    transition: 0.5s ease;
+}
+.btn:hover {
+    background: #fff;
+    color: #111;
+}
+.social-links {
+    position: relative;
+}
+.social-links a {
+    font-size: 25px;
+    color: #fff;
+    margin-right: 30px;
+}
+.about {
+    position: relative;
+}
+.title {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    color: crimson;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+.section-title::before {
+    content: '';
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    background-color: crimson;
+}
+.section-title::after {
+    content: '';
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: crimson;
+}
+.about .content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0px;
+}
+.about .col-left {
+    position: relative;
+    width: 45%;
+}
+.about .col-left .img-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.about .col-left .img-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+.about .col-left .img-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1 1 1 /15%);
+    border-radius: 8px;
+}
+.about .col-right {
+    position: relative;
+    width: 45%;
+}
+.about .col-right .content-title {
+    font-size: 26px;
+    font-weight: 800;
+}
+.about .col-right .paragraph-text {
+    margin-top: 20px;
+}
+.skills {
+    margin-top: 20px;
+    position: relative;
+    background-color: #000016;
+}
+.skills .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    color: #fff;
+}
+.skills .col-left {
+    position: relative;
+    width: 45%;
+}
+.skills .col-left p {
+    padding-top: 20px;
+}
+.skills .col-right {
+    position: relative;
+    width: 45%;
+}
+.skills .col-right .bar{
+    position: relative;
+    padding: 0px 10px;
+}
+.skills .col-right .bar .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+.skills .col-right .bar .line {
+    position: relative;
+    background-color: #ccc;
+    border-radius: 2px;
+    height: 15px;
+    margin-bottom: 30px;
+    padding: 5px 0;
+    width: 100%;
+}
+.skills .col-right .bar .html::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #E45126;
+    width: 90%;
+    border-radius: 2px;
+}
+.skills .col-right .bar .css::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #0C73B8;
+    width: 75%;
+    border-radius: 2px;
+}
+.skills .col-right .bar .javascript::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #E3A324;
+    width: 80%;
+    border-radius: 2px;
+}
+.skills .col-right .bar .jquery::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #30DD6D;
+    width: 60%;
+    border-radius: 2px;
+}
+.skills .col-right .bar .php::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #6D7EB8;
+    width: 50%;
+    border-radius: 2px;
+}
+.services {
+    position: relative;
+}
+.services .title p {
+    width: 80%;
+}
+
+.services .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.services .content-card {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 25px rgba(1, 1, 1, 0.15);
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 25px;
+}
+.services .content-card .service-icon {
+    font-size: 120px;
+    color: crimson;
+    transition: all 0.5s ease;
+}
+.services .content-card .service-icon:hover {
+    transform: translateY(-10px);
+}
+
+.services .content-card .info .card-title {
+    color: crimson;
+    font-size: 20px;
+    margin: 10px 0;
+}
+.work {
+    position: relative;
+    width: 100%;
+    background-color: #000016;
+}
+.work .content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.work .content .card {
+    position: relative;
+    width: 340px;
+    margin: 15px;
+}
+.work .content .card .img-card {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.work .img-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+.work .img-card:hover img {
+    transform: scale(1.2);
+}
+.contact {
+    position: relative;
+}
+.contact .content .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact .content .row .card {
+    width: 240px;
+    margin: 20px;
+    padding: 25px;
+    box-shadow: 0px 5px 25px rgba(1 1 1 /15%);
+    border-radius: 10px;
+    text-align: center;
+}
+.contact .content .row .card .card-icon {
+    font-size: 60px;
+    color: crimson;
+    transition: all 0.5s ease;     
+}
+.contact .content .row .card .card-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px;
+    color: #111;
+}
+.contact .content .row .card:hover .card-icon {
+    transform: translateY(-10px);
+}
+.contact-form {
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 25px rgba(1, 1, 1, 0.15);
+    margin-top: 50px;
+    max-width: 600px;
+}
+.contact-form h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.contact-form .form-control {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contact-form .form-control input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #111;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 500;
+    resize: none;
+}
+.contact-form .form-control .send-btn {
+    background-color: crimson;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease; 
+}   
+.contact-form .form-control .send-btn:hover {
+    background-color: #fff;
+    border: 1px solid #111;
+    color: #111;
+}
+.footer {
+    padding: 30px 0;
+    text-align: center;
+    background-color: #000016;
+    color: #fff;
+}
+.footer span {
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer p {
+    padding: 10px;
+}
+
+@media screen and (max-width: 1040px) {
+    
+    .header {
+        padding: 12px 20px;
+    }
+    .header .navigation {
+        display: none;
+    }
+
+    .header .navigation a {
+        color: #000;
+        font-size: 22px;
+        margin: 10px;
+        padding: 0px 20px;
+        border-radius: 20px;
+        transition: 0.3s ease;
+    }
+    .header .navigation a:hover {
+        background-color: crimson;
+        color: #fff;
+    }
+
+    .navigation.active {
+        position: fixed;
+        background: #fff;
+        top: 0;
+        right: 0;
+        width: 380px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all .5s ease;
+    }
+
+    .header .menu-bars {
+        background: url('images/menu.png') no-repeat;
+        background-size: 30px;
+        background-position: center;
+        color: #fff;
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        right: 0;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: all .4s ease;
+    }
+
+    .menu-bars.active {
+        background: url('images/close.png') no-repeat;
+        background-size: 25px;
+        background-position: center;
+        color: #fff;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        z-index: 999;
+        filter: invert(1);
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+    .main .content h2 {
+        font-size: 30px;
+    }
+    .main .content h2 span {
+        font-size: 50px;
+    }
+    .main .content .animated-text h3 {
+        font-size: 36px;
+    }
+    .about .content {
+        flex-direction: column;
+    }
+
+    .about .content .column {
+        position: relative;
+        width: 100%;
+    }
+    .about .content .col-right {
+        margin-top: 40px;
+    }
+    .skills .content {
+        flex-direction: column;
+    }
+    .skills .content .column {
+        width: 100%;
+    }
+    .skills .content .col-right {
+        margin-top: 40px;
+    }
+    .contact .content .contact-form {
+        padding: 35px 40px;
+    }
+}
+
+.scrollToTop-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: crimson;
+    color: #fff;
+    cursor: pointer;
+    opacity: 1;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 3px;
+    z-index: 999;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.scrollToTop-btn.active {
+    right: 20px;
+    opacity: 1;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
